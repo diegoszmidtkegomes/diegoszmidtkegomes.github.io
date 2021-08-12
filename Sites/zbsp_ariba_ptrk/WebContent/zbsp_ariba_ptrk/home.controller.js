@@ -130,7 +130,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" );
     this._oSupplierDashboardModel.loadData(this._oSupplierDashboardConfig.calculatedUrl);
 
-    this._oStatsModel.loadData("http://dontpad.com/jsonmonitor1");
+    this._oStatsModel.loadData("https://api.jsonbin.io/b/6115514ee1b0604017ae8784");
     this._oConfig.buyingPrCalculatedUrl = this._oConfig.buyingPrUrl
       + "&filter=" + this._oConfig.filter
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" )
