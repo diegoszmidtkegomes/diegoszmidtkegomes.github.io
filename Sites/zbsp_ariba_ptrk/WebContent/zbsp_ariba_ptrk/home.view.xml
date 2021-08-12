@@ -68,7 +68,7 @@
         </m:List>
       </m:HBox>
     </headerContent>
-    <sections>
+    <!--<sections>
       <ObjectPageSection
         titleUppercase="false"
         title="Visão Geral">
@@ -262,6 +262,6 @@
           </ObjectPageSubSection>
         </subSections>
       </ObjectPageSection>
-    </sections>
+    </sections>-->
   </ObjectPageLayout>
 </core:View>
