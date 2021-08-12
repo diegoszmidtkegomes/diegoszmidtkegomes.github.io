@@ -1,0 +1,128 @@
+<core:FragmentDefinition
+  xmlns:core="sap.ui.core"
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:u="sap.ui.unified"
+  xmlns:m="sap.m"
+  xmlns:l="sap.ui.layout">
+  <m:Dialog id="idDialogHistDoc" showHeader="true" title="Histórico de processamento">	
+    <Table
+      alternateRowColors="true"
+	  selectionMode="None"
+	  noDataText="Sem dados na tabela ZTMMD_ARIBA_LOG"
+      enableBusyIndicator="true"
+	  rows="{HistDoc>/lines}"
+      visibleRowCount="7">
+      <columns>
+        <Column
+          width="6rem"
+          filterProperty="sequencia">
+          <m:Label text="Sequência" />
+          <template>		 
+             <m:Text text="{HistDoc>sequencia}" />
+          </template>
+        </Column>  
+		<Column
+          width="3rem"
+          filterProperty="item">
+          <m:Label text="Item" />
+          <template>		 
+             <m:Text text="{HistDoc>item}" />
+          </template>
+        </Column> 
+		<Column
+          width="5rem"
+          filterProperty="empresa">
+          <m:Label text="Empresa" />
+          <template>		 
+             <m:Text text="{HistDoc>empresa}" />
+          </template>
+        </Column>  
+		<Column
+          width="4rem"
+          filterProperty="centro">
+          <m:Label text="Centro" />
+          <template>		 
+             <m:Text text="{HistDoc>centro}" />
+          </template>
+        </Column>
+		<Column
+          width="6rem"
+          filterProperty="fornecedor">
+          <m:Label text="Fornecedor" />
+          <template>		 
+             <m:Text text="{
+						path: 'HistDoc>fornecedor',
+						formatter: '.formatterLeadingZero'
+						}" />
+          </template>
+        </Column>
+		<Column
+          width="7rem"
+          filterProperty="material">
+          <m:Label text="Material" />
+          <template>		              
+			 <m:Text text="{
+						path: 'HistDoc>material',
+						formatter: '.formatterLeadingZero'
+						}" />
+          </template>
+        </Column>
+		<Column
+          width="7rem"
+          filterProperty="dataProcess">
+          <m:Label text="Data Processo" />
+          <template>	
+			<m:Text
+			  text="{
+				path: 'HistDoc>dataProcess',
+				type: 'sap.ui.model.type.Date',
+				formatOptions: {source: {pattern: 'yyyyMMddHHmmss'}, style: 'short'}
+			  }"
+			  wrapping="false" />		              
+          </template>
+        </Column>	
+		<Column
+          width="7rem"
+          filterProperty="horaProcess">
+          <m:Label text="Hora Processo" />
+          <template>		 
+             <m:Text text="{HistDoc>horaProcess}" />
+          </template>
+        </Column>	
+		<Column
+          width="6rem"
+          filterProperty="etapa">
+          <m:Label text="Etapa" />
+          <template>		 
+             <m:Text text="{HistDoc>etapa}" />
+          </template>
+        </Column>	
+		<Column
+          width="6rem"
+          filterProperty="status">
+          <m:Label text="Status" />
+          <template>		              
+			 <m:Text text="{
+						path: 'HistDoc>status',
+						formatter: '.formatterStatusHist'
+						}" />
+          </template>
+        </Column>
+		<Column
+          width="20rem"
+          filterProperty="log">
+          <m:Label text="Mensagem" />
+          <template>		 
+             <m:Text text="{HistDoc>log}" />
+          </template>
+        </Column>			
+      </columns>
+    </Table>	
+	<m:endButton>
+         <m:Button           
+            text="Fechar"
+            press="onCloseDialogHist"/>
+      </m:endButton>
+  </m:Dialog>
+</core:FragmentDefinition>

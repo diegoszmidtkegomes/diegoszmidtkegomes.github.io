@@ -1,0 +1,101 @@
+<core:FragmentDefinition
+  xmlns:core="sap.ui.core"
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:u="sap.ui.unified"
+  xmlns:m="sap.m"
+  xmlns:l="sap.ui.layout">
+  <m:VBox>
+    <m:MessageStrip
+      text="Recebimento de pedidos de compra e contratos dos tipos D01/D02/D03/D04/D05/D06/F01 no SAP ECC a partir de premiações no Ariba Sourcing. Histórico de integração conforme tabela ZTMMD_ARIBA_LOG"
+      showIcon="true"
+      showCloseButton="true"
+      class="sapUiMediumMarginBottom" />
+    <Table
+      alternateRowColors="true"
+      enableBusyIndicator="true"
+	  selectionMode="None"
+      rows="{Main>/zclAribaQuoteMessage}"
+      visibleRowCount="7">
+      <columns>
+	  <Column
+          width="7rem"
+          filterProperty="interfaceClassification"
+		  defaultFilterOperator="Contains">
+          <m:Label text="Tipo Interface" />
+          <template>
+            <m:Text
+              text="{Main>line/interfaceClassification}"
+			  wrapping="false"
+               />
+          </template>
+        </Column>
+        <Column
+          width="9rem"
+          filterProperty="businessDocument"
+		  defaultFilterOperator="Contains">
+          <m:Label text="Evento Sourcing" />
+          <template>
+            <m:Link
+              text="{Main>line/businessDocument}"
+              href="{Main>line/businessDocumentUrl}"
+              target="_blank" />
+          </template>
+        </Column>
+        <Column
+          width="6rem"
+          sortProperty="line/entryDate">
+          <m:Label text="Data" />
+          <template>
+            <m:Text
+              text="{
+                path: 'Main>line/entryDate',
+                type: 'sap.ui.model.type.Date',
+                formatOptions: {source: {pattern: 'yyyyMMddHHmmss'}, style: 'short'}
+              }"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="20rem">
+          <m:Label text="PI" />
+          <template>
+            <m:Link
+              text="{= ${Main>line/sourceId}.substr(0,36) }"
+              href="{Main>line/sourceUrl}"
+              target="_blank"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="7rem">
+          <m:Label text="PI status" />
+          <template>
+            <m:Text
+              text="{Main>line/sourceStatusText}"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="12rem">
+          <m:Label text="RFC" />
+          <template>
+            <m:Text
+              text="{Main>line/targetId}" />
+          </template>
+        </Column>
+        <Column width="7rem">
+          <m:Label text="RFC status" />
+          <template>
+            <m:Text
+              text="{Main>line/targetStatusText}"
+              wrapping="false" />
+          </template>
+        </Column>
+		<Column width="6rem">
+          <m:Label text="Histórico" />
+          <template>
+			<m:Button icon="sap-icon://action" type="Transparent" press="onPressHist" tooltip="Visualizar Histórico de processamento"/>
+          </template>
+        </Column>
+      </columns>
+    </Table>
+  </m:VBox>
+</core:FragmentDefinition>
