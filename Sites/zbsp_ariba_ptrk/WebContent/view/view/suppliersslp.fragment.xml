@@ -1,0 +1,109 @@
+<core:FragmentDefinition
+  xmlns:core="sap.ui.core"
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:u="sap.ui.unified"
+  xmlns:m="sap.m"
+  xmlns:l="sap.ui.layout">
+  <m:VBox>
+    <m:MessageStrip
+      text="Consulta de todos os fornecedores no ambiente Ariba SLP e verificação de histórico de integração da tabela ZMMT0002"
+      showIcon="true"
+      showCloseButton="true"
+      class="sapUiMediumMarginBottom" />
+    <Table
+      alternateRowColors="true"
+      enableBusyIndicator="true"
+	  selectionMode="None"
+      rows="{Supplier>/suppliers}"
+      visibleRowCount="7">
+      <columns>
+        <Column
+          width="8rem"
+          filterProperty="id"
+          sortProperty="id">
+          <m:Label text="SLP" />
+          <template>
+            <m:Link
+              text="{Supplier>id}"
+              href="{Supplier>idUrl}"
+              target="_blank"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column
+          width="8rem"
+          filterProperty="erpId"
+          sortProperty="erpId">
+          <m:Label text="ERP" />
+          <template>
+            <m:Text text="{Supplier>erpId}" />
+          </template>
+        </Column>
+        <Column
+          width="8rem"
+          filterProperty="acmId"
+          sortProperty="acmId">
+          <m:Label text="ACM" />
+          <template>
+            <m:Text text="{Supplier>acmId}" />
+          </template>
+        </Column>
+        <Column
+          width="8rem"
+          filterProperty="anid"
+          sortProperty="anid">
+          <m:Label text="AN" />
+          <template>
+            <m:Text text="{Supplier>anid}" />
+          </template>
+        </Column>
+        <Column
+          width="26rem"
+          filterProperty="name"
+          sortProperty="name">
+          <m:Label text="Nome" />
+          <template>
+            <m:Text text="{Supplier>name}" />
+          </template>
+        </Column>
+        <Column
+          width="10rem"
+          filterProperty="qualificationStatus"
+          sortProperty="qualificationStatus">
+          <m:Label text="Qualificação" />
+          <template>
+            <m:Text text="{Supplier>qualificationStatus}" />
+          </template>
+        </Column>
+        <Column
+          width="10rem"
+          filterProperty="registrationStatus"
+          sortProperty="registrationStatus">
+          <m:Label text="Registro" />
+          <template>
+            <m:Text text="{Supplier>registrationStatus}" />
+          </template>
+        </Column>
+        <Column
+          width="8rem"
+          filterProperty="integrationStatus"
+          sortProperty="integrationStatus">
+          <m:Label text="Integração" />
+          <template>
+            <m:Text text="{Supplier>integrationStatus}" />
+          </template>
+        </Column>
+        <Column
+          width="24rem"
+          filterProperty="msg"
+          sortProperty="msg">
+          <m:Label text="Log" />
+          <template>
+            <m:Text text="{Supplier>msg}" />
+          </template>
+        </Column>
+      </columns>
+    </Table>
+  </m:VBox>
+</core:FragmentDefinition>
