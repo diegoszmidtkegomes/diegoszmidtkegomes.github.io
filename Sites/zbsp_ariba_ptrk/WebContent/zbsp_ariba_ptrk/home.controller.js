@@ -9,7 +9,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
   _oConfig : {
     "mainUrl" : "/sap/bc/zariba/main/?",
     "mainCalculatedUrl" : "",
-    "statsUrl" : "/sap/bc/zariba/stats?",
+    "statsUrl" : "http://dontpad.com/jsonmonitor1",
     "buyingPrUrl" : "/sap/bc/zariba/buyingpr?",
     "buyingPrCalculatedUrl":"",
 	"buyingMdStatusUrl" : "/sap/bc/zariba/buyingmdstatus?",	
