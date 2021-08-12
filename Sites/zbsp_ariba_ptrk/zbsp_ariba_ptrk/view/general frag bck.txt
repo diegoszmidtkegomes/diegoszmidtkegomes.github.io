@@ -1,0 +1,369 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:f="sap.f"
+  xmlns:viz="sap.viz.ui5.controls"
+  xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+  xmlns:viz.data="sap.viz.ui5.data"
+  xmlns:card="sap.f.cards"
+  xmlns:layout="sap.ui.layout"
+  xmlns:core="sap.ui.core"
+  xmlns:w="sap.ui.integration.widgets"
+  displayBlock="true"
+  xmlns:c="sap.suite.ui.microchart">
+  <ScrollContainer
+    height="100%"
+    width="100%"
+    vertical="true">
+    <MessageStrip
+      text="Indicadores para cada documento: Filtros aplicados x quantidades totais"
+      showIcon="true"
+      showCloseButton="true"
+      class="sapUiMediumMarginBottom">
+    </MessageStrip>
+    <HBox>
+      <VBox>
+		<VBox>
+			<Text text="Envio RFQs Ariba Sourcing" class="sapUiSmallMargin">
+				<layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layoutData>
+			</Text>
+			<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteRequestTotal} > 0 }">
+				<items>
+					<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">
+						<c:segments>
+							<c:InteractiveDonutChartSegment label="Erro" value="{= Math.round( (${Main>/zclAribaQuoteRequestCount} / ${Main>/zclAribaQuoteRequestTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/zclAribaQuoteRequestCount} /  ${Main>/zclAribaQuoteRequestTotal}) * 100 )}%" color="Error"/>							
+							<c:InteractiveDonutChartSegment label="Sucesso" 
+							value="{= Math.round(( ${Main>/zclAribaQuoteRequestTotal} - ${Main>/zclAribaQuoteRequestCount} ) / ${Main>/zclAribaQuoteRequestTotal} * 100 )}" 
+							displayedValue="{= Math.round(( ${Main>/zclAribaQuoteRequestTotal} - ${Main>/zclAribaQuoteRequestCount})  / ${Main>/zclAribaQuoteRequestTotal} * 100 )}%" color="Good"/>							
+						</c:segments>
+					</c:InteractiveDonutChart>  
+					<c:RadialMicroChart
+						size="L"
+						total="{Main>/zclAribaQuoteRequestTotal}"
+						fraction="{Main>/zclAribaQuoteRequestCount}"
+						valueColor="Error"
+						press="press"
+						visible="{Config>/errorOnly}"
+						class="sapUiSmallMargin"></c:RadialMicroChart>
+				</items>
+			</FlexBox>	
+			<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteRequestTotal} === 0 }">
+				<Text text="Sem dados no período" class="sapUiSmallMargin">
+				<layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layoutData>
+			</Text>
+			</FlexBox>
+		</VBox>
+        <!--<VBox>
+          <c:RadialMicroChart
+            size="L"
+            total="{Main>/zclAribaQuoteRequestTotal}"
+            fraction="{Main>/zclAribaQuoteRequestCount}"
+            valueColor="{=
+                        ${Main>/zclAribaQuoteRequestCount} / ${Main>/zclAribaQuoteRequestTotal} >= 0.95 ?
+                        'Good' :
+                          ( ${Main>/zclAribaQuoteRequestCount} / ${Main>/zclAribaQuoteRequestTotal} >= 0.85 ? 'Critical' : 'Error' )
+                      }"
+            press="press"
+            class="sapUiSmallMargin"></c:RadialMicroChart>
+          <Text
+            text="Envio RFQs Ariba Sourcing"
+            wrapping="true"
+            width="10rem" />
+        </VBox>-->
+		<VBox>
+			<Text text="Recebimento premiação Ariba Sourcing " class="sapUiSmallMargin">
+				<layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layoutData>
+			</Text>
+			<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteMessageTotal} > 0 }">
+				<items>
+					<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">					
+						<c:segments>
+							<c:InteractiveDonutChartSegment label="Erro" value="{= Math.round( (${Main>/zclAribaQuoteMessageCount} / ${Main>/zclAribaQuoteMessageTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/zclAribaQuoteMessageCount} /  ${Main>/zclAribaQuoteMessageTotal}) * 100 )}%" color="Error"/>							
+							<c:InteractiveDonutChartSegment label="Sucesso" 
+							value="{= Math.round( (${Main>/zclAribaQuoteMessageTotal} - ${Main>/zclAribaQuoteMessageCount} ) / ${Main>/zclAribaQuoteMessageTotal} * 100 )}" 
+							displayedValue="{= Math.round( ( ${Main>/zclAribaQuoteMessageTotal} - ${Main>/zclAribaQuoteMessageCount})  / ${Main>/zclAribaQuoteMessageTotal} * 100 )}%" color="Good"/>
+							
+						</c:segments>
+					</c:InteractiveDonutChart>   
+					<c:RadialMicroChart
+						size="L"
+						visible="{Config>/errorOnly}" 
+						total="{Main>/zclAribaQuoteMessageTotal}"
+						fraction="{Main>/zclAribaQuoteMessageCount}"
+						valueColor="Error"
+						press="press"
+						class="sapUiSmallMargin">
+					  </c:RadialMicroChart>
+				</items>
+			</FlexBox>	
+			<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteMessageTotal} === 0 }">
+				<Text text="Sem dados no período" class="sapUiSmallMargin">
+				<layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layoutData>
+			</Text>
+			</FlexBox>	
+        </VBox>
+	   <!--<VBox>
+          <c:RadialMicroChart
+            size="L"
+            total="{Main>/zclAribaQuoteMessageTotal}"
+            fraction="{Main>/zclAribaQuoteMessageCount}"
+            valueColor="{=
+                        ${Main>/zclAribaQuoteMessageCount} / ${Main>/zclAribaQuoteMessageTotal} >= 0.95 ?
+                        'Good' :
+                          ( ${Main>/zclAribaQuoteMessageCount} / ${Main>/zclAribaQuoteMessagerTotal} >= 0.85 ? 'Critical' : 'Error' )
+                      }"
+            press="press"
+            class="sapUiSmallMargin">
+          </c:RadialMicroChart>
+          <Text
+            text="Recebimento premiação Ariba Sourcing"
+            wrapping="true"
+            width="10rem" />
+        </VBox>-->
+      </VBox>
+	  
+	  <VBox>
+		<Text text="Recebimento Ordens de Compra Ariba Buying" class="sapUiSmallMargin">
+			<layoutData>
+				<layout:GridData span="XL12 L12 M12 S12"/>
+			</layoutData>
+		</Text>
+		<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaPurchaseOrderTotal} > 0 }">
+			<items>			
+				<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}" >
+					<c:segments>
+						<c:InteractiveDonutChartSegment label="Erro" value="{= Math.round((${Main>/zclAribaPurchaseOrderCount} / ${Main>/zclAribaPurchaseOrderTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/zclAribaPurchaseOrderCount} /  ${Main>/zclAribaPurchaseOrderTotal}) * 100 )}%" color="Error"/>							
+						<c:InteractiveDonutChartSegment label="Sucesso" 
+						value="{= Math.round(( ${Main>/zclAribaPurchaseOrderTotal} - ${Main>/zclAribaPurchaseOrderCount} ) / ${Main>/zclAribaPurchaseOrderTotal} * 100 )}" 
+						displayedValue="{= Math.round(( ${Main>/zclAribaPurchaseOrderTotal} - ${Main>/zclAribaPurchaseOrderCount})  / ${Main>/zclAribaPurchaseOrderTotal} * 100 )}%" color="Good"/>							
+					</c:segments>					
+				</c:InteractiveDonutChart>
+				<c:RadialMicroChart
+						  size="L"
+						  total="{Main>/zclAribaPurchaseOrderTotal}"
+						  fraction="{Main>/zclAribaPurchaseOrderCount}"
+						  valueColor="Error"
+						  press="press"
+						  visible="{Config>/errorOnly}"
+						  class="sapUiSmallMargin">
+				</c:RadialMicroChart>									
+			</items>
+		</FlexBox>	
+		<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaPurchaseOrderTotal} === 0 }">
+			<Text text="Sem dados no período" class="sapUiSmallMargin">
+			<layoutData>
+				<layout:GridData span="XL12 L12 M12 S12"/>
+			</layoutData>
+		</Text>
+		</FlexBox>	
+      </VBox>
+	  
+	  <!--<VBox>
+        <c:RadialMicroChart
+          size="L"
+          total="{Main>/zclAribaPurchaseOrderTotal}"
+          fraction="{Main>/zclAribaPurchaseOrderCount}"
+          valueColor="{=
+                  ${Main>/zclAribaPurchaseOrderCount} / ${Main>/zclAribaPurchaseOrderTotal} >= 0.95 ?
+                  'Good' :
+                    ( ${Main>/zclAribaPurchaseOrderCount} / ${Main>/zclAribaPurchaseOrderTotal} >= 0.85 ? 'Critical' : 'Error' )
+                }"
+          press="press"
+          class="sapUiSmallMargin">
+        </c:RadialMicroChart>
+        <Text
+          text="Recebimento Ordens de Compra Ariba Buying"
+          wrapping="true"
+          width="10rem" />
+      </VBox>-->
+	  
+	  <VBox>
+	  <Text text="Folhas de serviço Fornecedor" class="sapUiSmallMargin">
+			<layoutData>
+				<layout:GridData span="XL12 L12 M12 S12"/>
+			</layoutData>
+		</Text>
+		<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaServentrysheetTotal} > 0 }">
+			<items>			
+				<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">
+					<c:segments>
+						<c:InteractiveDonutChartSegment label="Erro" value="{= Math.round( (${Main>/zclAribaServentrysheetCount} / ${Main>/zclAribaServentrysheetTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/zclAribaServentrysheetCount} /  ${Main>/zclAribaServentrysheetTotal}) * 100 )}%" color="Error"/>							
+						<c:InteractiveDonutChartSegment label="Sucesso" 
+						value="{= Math.round(( ${Main>/zclAribaServentrysheetTotal} - ${Main>/zclAribaServentrysheetCount} ) / ${Main>/zclAribaServentrysheetTotal} * 100 )}" 
+						displayedValue="{= Math.round(( ${Main>/zclAribaServentrysheetTotal} - ${Main>/zclAribaServentrysheetCount})  / ${Main>/zclAribaServentrysheetTotal} * 100 )}%" color="Good"/>							
+					</c:segments>					
+				</c:InteractiveDonutChart>   
+				<c:RadialMicroChart
+					  size="L"
+					  total="{Main>/zclAribaServentrysheetTotal}"
+					  fraction="{Main>/zclAribaServentrysheetCount}"
+					  valueColor="Error"
+					  press="press"
+					  visible="{Config>/errorOnly}"
+					  class="sapUiSmallMargin">
+					</c:RadialMicroChart>
+			</items>
+		</FlexBox>	
+		<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaServentrysheetTotal} === 0 }">
+			<Text text="Sem dados no período" class="sapUiSmallMargin">
+			<layoutData>
+				<layout:GridData span="XL12 L12 M12 S12"/>
+			</layoutData>
+		</Text>
+		</FlexBox>	
+	  </VBox>
+      <!--<VBox>
+        <c:RadialMicroChart
+          size="L"
+          total="{Main>/zclAribaServentrysheetTotal}"
+          fraction="{Main>/zclAribaServentrysheetCount}"
+          valueColor="{=
+                      ${Main>/zclAribaServentrysheetCount} / ${Main>/zclAribaServentrysheetTotal} >= 0.95 ?
+                      'Good' :
+                        ( ${Main>/zclAribaServentrysheetCount} / ${Main>/zclAribaServentrysheetTotal} >= 0.85 ? 'Critical' : 'Error' )
+                    }"
+          press="press"
+          class="sapUiSmallMargin">
+        </c:RadialMicroChart>
+        <Text
+          text="Folhas de serviço Fornecedor"
+          wrapping="true"
+          width="10rem" />
+      </VBox>-->
+      <viz:VizFrame
+        uiConfig="{applicationSet:'fiori'}"
+        height='24rem'
+        width="24rem"
+        vizType='column'
+        vizProperties="{
+                  title: {
+                    text: 'Registro'
+                  },
+                    plotArea : {
+                      dataLabel: {
+                        visible: true
+                      }
+                    }
+                }">
+        <viz:dataset>
+          <viz.data:FlattenedDataset
+            data="{Supplier>/registration}"
+            context="label">
+            <viz.data:dimensions>
+              <viz.data:DimensionDefinition
+                name="label"
+                value="{Supplier>label}" />
+            </viz.data:dimensions>
+            <viz.data:measures>
+              <viz.data:MeasureDefinition
+                name="count"
+                value="{Supplier>count}" />
+            </viz.data:measures>
+          </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+          <viz.feeds:FeedItem
+            uid="valueAxis"
+            type="Measure"
+            values="count" />
+          <viz.feeds:FeedItem
+            uid="categoryAxis"
+            type="Dimension"
+            values="label" />
+        </viz:feeds>
+      </viz:VizFrame>
+      <viz:VizFrame
+        uiConfig="{applicationSet:'fiori'}"
+        height='24rem'
+        width="24rem"
+        vizType='column'
+        vizProperties="{
+                    title: {
+                      text: 'Qualificação'
+                    },
+                    plotArea : {
+                      dataLabel: {
+                        visible: true
+                      }
+                    }
+                  }">
+        <viz:dataset>
+          <viz.data:FlattenedDataset
+            data="{Supplier>/qualification}"
+            context="label">
+            <viz.data:dimensions>
+              <viz.data:DimensionDefinition
+                name="label"
+                value="{Supplier>label}" />
+            </viz.data:dimensions>
+            <viz.data:measures>
+              <viz.data:MeasureDefinition
+                name="count"
+                value="{Supplier>count}" />
+            </viz.data:measures>
+          </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+          <viz.feeds:FeedItem
+            uid="valueAxis"
+            type="Measure"
+            values="count" />
+          <viz.feeds:FeedItem
+            uid="categoryAxis"
+            type="Dimension"
+            values="label" />
+        </viz:feeds>
+      </viz:VizFrame>
+      <viz:VizFrame
+        uiConfig="{applicationSet:'fiori'}"
+        height='24rem'
+        width="16rem"
+        vizType='column'
+        vizProperties="{
+                  title: {
+                      text: 'Integração'
+                    },
+                    plotArea : {
+                      dataLabel: {
+                        visible: true
+                      }
+                    }
+             	 	}">
+        <viz:dataset>
+          <viz.data:FlattenedDataset
+            data="{Supplier>/integration}"
+            context="label">
+            <viz.data:dimensions>
+              <viz.data:DimensionDefinition
+                name="label"
+                value="{Supplier>label}" />
+            </viz.data:dimensions>
+            <viz.data:measures>
+              <viz.data:MeasureDefinition
+                name="count"
+                value="{Supplier>count}" />
+            </viz.data:measures>
+          </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+          <viz.feeds:FeedItem
+            uid="valueAxis"
+            type="Measure"
+            values="count" />
+          <viz.feeds:FeedItem
+            uid="categoryAxis"
+            type="Dimension"
+            values="label" />
+        </viz:feeds>
+      </viz:VizFrame>
+    </HBox>
+  </ScrollContainer>
+</core:FragmentDefinition>
