@@ -4,7 +4,7 @@
   xmlns="sap.uxap"
   xmlns:m="sap.m"
   xmlns:f="sap.ui.layout.form"
-  controllerName="zbsp_ariba_ptrk.home"
+  controllerName="zbsp_ariba_ptrk.home3"
   xmlns:html="http://www.w3.org/1999/xhtml">
   <ObjectPageLayout
     id="ObjectPageLayout"
