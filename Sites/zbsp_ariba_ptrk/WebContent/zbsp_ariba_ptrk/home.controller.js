@@ -122,13 +122,13 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" )
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
-    this._oQuoteRequestModel.loadData(this._oConfig.mainCalculatedUrl);
+    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/b/6115573353ca131484a82035");
     this._oConfig.showAll = this._oConfig.errorOnly ? false : true ;
     this._oConfigModel.updateBindings();
 
     this._oSupplierDashboardConfig.calculatedUrl = this._oSupplierDashboardConfig.url
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" );
-    this._oSupplierDashboardModel.loadData(this._oSupplierDashboardConfig.calculatedUrl);
+    this._oSupplierDashboardModel.loadData("https://api.jsonbin.io/b/611556eb53ca131484a82014");
 
     this._oStatsModel.loadData("https://api.jsonbin.io/b/6115514ee1b0604017ae8784");
     this._oConfig.buyingPrCalculatedUrl = this._oConfig.buyingPrUrl
@@ -137,7 +137,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
 
-    this._oBuyingPrModel.loadData(this._oConfig.buyingPrCalculatedUrl);
+    this._oBuyingPrModel.loadData("https://api.jsonbin.io/b/6115544d53ca131484a81eb8");
 	
 	this._oConfig.buyingMdStatusCalcUrl = this._oConfig.buyingMdStatusUrl
       + "&filter=" + this._oConfig.filter
@@ -145,7 +145,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
 
-    this._oStatusMdBuyingModel.loadData(this._oConfig.buyingMdStatusCalcUrl);
+    this._oStatusMdBuyingModel.loadData("https://api.jsonbin.io/b/61155422e1b0604017ae8926");
   },
   
   formatterLeadingZero: function(oValue){
