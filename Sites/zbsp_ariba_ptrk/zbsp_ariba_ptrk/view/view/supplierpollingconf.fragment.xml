@@ -1,0 +1,93 @@
+<core:FragmentDefinition
+  xmlns:core="sap.ui.core"
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:u="sap.ui.unified"
+  xmlns:m="sap.m"
+  xmlns:l="sap.ui.layout">
+  <m:VBox>
+    <m:MessageStrip
+      text="Envio da Interface de Confirmação para o SLP e verificação de status na tabela ZMMT0002"
+      showIcon="true"
+      showCloseButton="true"
+      class="sapUiMediumMarginBottom" />
+    <Table
+      alternateRowColors="true"
+	  selectionMode="None"
+      enableBusyIndicator="true"
+      rows="{Main>/zclAribaSlpPlngConf}"
+      visibleRowCount="7">
+      <columns>
+        <Column
+          width="9rem"
+          filterProperty="businessDocument">
+          <m:Label text="SLP" />
+          <template>
+			<m:Link
+              text="{Main>line/businessDocument}"
+              href="{Main>line/businessDocumentUrl}"
+              target="_blank"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column
+          width="6rem"
+          sortProperty="entryDate">
+          <m:Label text="Data" />
+          <template>
+            <m:Text
+              text="{
+                path: 'Main>line/entryDate',
+                type: 'sap.ui.model.type.Date',
+                formatOptions: {source: {pattern: 'yyyyMMddHHmmss'}, style: 'short'}
+              }"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="9rem" filterProperty="sourceId">
+          <m:Label text="ERP" />
+          <template>
+            <m:Text
+              text="{Main>line/sourceId}"/>
+          </template>
+        </Column>
+        <Column width="7rem">
+          <m:Label text="ERP status" />
+          <template>
+            <m:Text
+              text="{Main>line/sourceStatusText}"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="20rem">
+          <m:Label text="PI Mensagem Confirmação" />
+          <template>
+		   <m:Link
+              text="{= ${Main>line/targetId}.substr(0,36) }"
+              href="{Main>line/targetUrl}"
+              target="_blank"
+              wrapping="false" />            
+          </template>
+        </Column>
+        <Column width="8rem">
+          <m:Label text="Status" />
+          <template>
+            <m:Text
+              text="{Main>line/targetStatusText}"
+              wrapping="false" />
+          </template>
+        </Column>
+		<Column width="20rem">
+          <m:Label text="PI Mensagem Original" />
+          <template>
+		   <m:Link
+              text="{= ${Main>line/middlewareId}.substr(0,36) }"
+              href="{Main>line/middlewareUrl}"
+              target="_blank"
+              wrapping="false" />            
+          </template>
+        </Column>
+      </columns>
+    </Table>
+  </m:VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,85 @@
+<core:FragmentDefinition
+  xmlns:core="sap.ui.core"
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:u="sap.ui.unified"
+  xmlns:m="sap.m"
+  xmlns:l="sap.ui.layout">
+  <m:VBox>
+    <m:MessageStrip
+      text="Interface de Envio e retorno de Polling com o SLP"
+      showIcon="true"
+      showCloseButton="true"
+      class="sapUiMediumMarginBottom" />
+    <Table
+      alternateRowColors="true"
+	  selectionMode="None"
+      enableBusyIndicator="true"
+      rows="{Main>/zclAribaSlpPolling}"
+      visibleRowCount="7">
+      <columns>
+        <Column
+          width="18rem"
+          filterProperty="businessDocument">
+          <m:Label text="ID" />
+          <template>
+            <m:Text
+              text="{Main>line/businessDocument}"
+              href="{Main>line/businessDocumentUrl}"
+              target="_blank" />
+          </template>
+        </Column>
+        <Column
+          width="6rem"
+          sortProperty="line/entryDate">
+          <m:Label text="Data" />
+          <template>
+            <m:Text
+              text="{
+                path: 'Main>line/entryDate',
+                type: 'sap.ui.model.type.Date',
+                formatOptions: {source: {pattern: 'yyyyMMddHHmmss'}, style: 'short'}
+              }"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="19rem">
+          <m:Label text="PI Mensagem envio" />
+          <template>
+            <m:Link
+              text="{= ${Main>line/sourceId}.substr(0,36) }"
+              href="{Main>line/sourceUrl}"
+              target="_blank"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="7rem">
+          <m:Label text="PI status" />
+          <template>
+            <m:Text
+              text="{Main>line/sourceStatusText}"
+              wrapping="false" />
+          </template>
+        </Column>
+        <Column width="19rem">
+          <m:Label text="PI Mensagem Retorno" />
+          <template>
+		   <m:Link
+              text="{= ${Main>line/targetId}.substr(0,36) }"
+              href="{Main>line/targetUrl}"
+              target="_blank"
+              wrapping="false" />            
+          </template>
+        </Column>
+        <Column width="14rem">
+          <m:Label text="Status Recebimento Ariba" />
+          <template>
+            <m:Text
+              text="{Main>line/targetStatusText}"
+              wrapping="false" />
+          </template>
+        </Column>
+      </columns>
+    </Table>
+  </m:VBox>
+</core:FragmentDefinition>
