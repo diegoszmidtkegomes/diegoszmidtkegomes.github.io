@@ -16,7 +16,7 @@
     width="100%"
     vertical="true">
     <MessageStrip
-      text="Indicadores para cada documento: Filtros aplicados x quantidades totais"
+      text="{i18n>generalFrag}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom">
@@ -24,7 +24,7 @@
     <HBox>
       <VBox>
 		<VBox>
-			<Text text="Envio RFQs Ariba Sourcing" class="sapUiSmallMargin">
+			<Text text="{i18n>generalFragBox}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -50,7 +50,7 @@
 				</items>
 			</FlexBox>	
 			<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteRequestTotal} === 0 }">
-				<Text text="Sem dados no período" class="sapUiSmallMargin">
+				<Text text="{i18n>noDataDate}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -58,7 +58,7 @@
 			</FlexBox>
 		</VBox>        
 		<VBox>
-			<Text text="Recebimento premiação Ariba Sourcing" class="sapUiSmallMargin">
+			<Text text="{i18n>generalAward}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -86,7 +86,7 @@
 				</items>
 			</FlexBox>	
 			<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteMessageTotal} === 0 }">
-				<Text text="Sem dados no período" class="sapUiSmallMargin">
+				<Text text="{i18n>noDataDate}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -123,14 +123,14 @@
 			</items>
 		</FlexBox>	
 		<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaPurchaseOrderTotal} === 0 }">
-			<Text text="Sem dados no período" class="sapUiSmallMargin">
+			<Text text="{i18n>noDataDate}" class="sapUiSmallMargin">
 			<layoutData>
 				<layout:GridData span="XL12 L12 M12 S12"/>
 			</layoutData>
 		</Text>
 		</FlexBox>	
 		<VBox>
-			<Text text="Recebimento premiação Ariba Sourcing D07" class="sapUiSmallMargin">
+			<Text text="{i18n>generalAwardD07}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -158,7 +158,7 @@
 				</items>
 			</FlexBox>	
 			<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaQuoteMsgCpexTotal} === 0 }">
-				<Text text="Sem dados no período" class="sapUiSmallMargin">
+				<Text text="{i18n>noDataDate}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -168,7 +168,7 @@
       </VBox>
 	  
 	  <VBox>
-	  <Text text="Folhas de serviço Fornecedor" class="sapUiSmallMargin">
+	  <Text text="{i18n>serviceEntrySheet}" class="sapUiSmallMargin">
 			<layoutData>
 				<layout:GridData span="XL12 L12 M12 S12"/>
 			</layoutData>
@@ -195,7 +195,7 @@
 			</items>
 		</FlexBox>	
 		<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaServentrysheetTotal} === 0 }">
-			<Text text="Sem dados no período" class="sapUiSmallMargin">
+			<Text text="{i18n>noDataDate}" class="sapUiSmallMargin">
 			<layoutData>
 				<layout:GridData span="XL12 L12 M12 S12"/>
 			</layoutData>
@@ -203,7 +203,7 @@
 		</FlexBox>	
 		
 		<VBox>
-			<Text text="Proposta de pagamento" class="sapUiSmallMargin">
+			<Text text="{i18n>paymentProposal}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
@@ -231,7 +231,7 @@
 				</items>
 			</FlexBox>	
 			<FlexBox width="10rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/zclAribaRemitAdvTotal} === 0 }">
-				<Text text="Sem dados no período" class="sapUiSmallMargin">
+				<Text text="{i18n>noDataDate}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
