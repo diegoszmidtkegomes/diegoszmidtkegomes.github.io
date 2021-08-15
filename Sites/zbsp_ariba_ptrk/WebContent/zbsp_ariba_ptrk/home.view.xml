@@ -71,10 +71,10 @@
     <sections>
       <ObjectPageSection
         titleUppercase="false"
-        title="Visão Geral">
+        title="{i18n>labelGeneralView}">
         <subSections>
           <ObjectPageSubSection
-            title="Visão Geral"
+            title="{i18n>labelGeneralView}"
             titleUppercase="false">
             <blocks>
               <core:Fragment
