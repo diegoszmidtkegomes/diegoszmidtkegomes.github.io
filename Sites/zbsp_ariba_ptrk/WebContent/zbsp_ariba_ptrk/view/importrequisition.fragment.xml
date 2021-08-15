@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">
   <m:VBox>
     <m:MessageStrip
-      text="Envio de requisições de compra (ME51N) do SAP ECC para o Ariba Buying. Documentos e histórico retornados da tabela ZMMT0004"
+      text="{i18n>importreqView}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -22,7 +22,7 @@
           width="9rem"
           filterProperty="banfn"
           sortProperty="banfn">
-          <m:Label text="Requisição ECC" />
+          <m:Label text="Req. ECC" />
           <template>
             <m:Link
               text="{BuyingPr>banfn}"
@@ -33,7 +33,7 @@
         <Column
           width="6rem"
           sortProperty="dateTime">
-          <m:Label text="Data" />
+          <m:Label text="{i18n>date}" />
           <template>
             <m:Text
               text="{
@@ -48,7 +48,7 @@
           width="12rem"
           filterProperty="isSuccessful"
           sortProperty="isSuccessful">
-          <m:Label text="Enviado?" />
+          <m:Label text="{i18n>send}" />
           <template>
             <m:Text text="{= ${BuyingPr>isSuccessful} == true ? 'Sim' : 'Não' }" />
           </template>
@@ -57,7 +57,7 @@
           width="40rem"
           filterProperty="msg"
           sortProperty="msg">
-          <m:Label text="Mensagem" />
+          <m:Label text="Message" />
           <template>
             <m:Text text="{BuyingPr>msg}" />
           </template>
