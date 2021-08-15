@@ -129,7 +129,7 @@
 			</layoutData>
 		</Text>
 		</FlexBox>	
-		<VBox>
+		<!--<VBox>
 			<Text text="{i18n>generalAwardD07}" class="sapUiSmallMargin">
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12"/>
@@ -164,7 +164,7 @@
 				</layoutData>
 			</Text>
 			</FlexBox>	          
-		</VBox>
+		</VBox>-->
       </VBox>
 	  
 	  <VBox>

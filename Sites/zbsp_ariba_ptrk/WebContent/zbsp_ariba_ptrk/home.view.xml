@@ -106,7 +106,7 @@
                 type="XML" />
             </blocks>
           </ObjectPageSubSection>
-      <ObjectPageSubSection
+		<!--<ObjectPageSubSection
             title="Quote Message ({Main>/zclAribaQuoteMsgCpexCount})"
             titleUppercase="false">
             <blocks>
@@ -114,7 +114,7 @@
                 fragmentName="zbsp_ariba_ptrk.view.quotemessagecapex"
                 type="XML" />
             </blocks>
-          </ObjectPageSubSection>
+          </ObjectPageSubSection>-->
 		  <ObjectPageSubSection
             title="Master Data ({Main>/zclAribaSourcingMdCount})"
             titleUppercase="false">
