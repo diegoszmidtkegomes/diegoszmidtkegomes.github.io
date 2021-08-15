@@ -13,7 +13,7 @@
       <ObjectPageDynamicHeaderTitle>
         <heading>
           <m:Title
-            text="Monitor integrações SAP Ariba"
+		   text="{i18n>title}"           
             wrapping="true" />
         </heading>
         <snappedTitleOnMobile>

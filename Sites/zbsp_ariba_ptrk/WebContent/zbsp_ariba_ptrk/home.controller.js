@@ -48,6 +48,11 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
     this.getView().setModel(this._oBuyingPrModel, "BuyingPr");
     this.getView().setModel(this._oStatusMdBuyingModel, "StatusMdBuying");
     this._fUpdateModel();
+	
+	var i18nModel = new ResourceModel({
+            bundleName: "zbsp_ariba_ptrk.i18n.i18n"
+         });
+	this.getView().setModel(i18nModel, "i18n");
   },
 
 /**
