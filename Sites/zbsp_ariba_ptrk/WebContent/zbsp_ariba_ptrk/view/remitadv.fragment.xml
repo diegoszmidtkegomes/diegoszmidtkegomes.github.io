@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">
   <m:VBox>
     <m:MessageStrip
-      text="Envio de pagamentos (F110) para os fornecedores no Ariba Network através do SAP PI (CI9)"
+      text="{i18n>remitadvtView}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -20,7 +20,7 @@
         <Column
           width="9rem"
           filterProperty="Name">
-          <m:Label text="Documento" />
+          <m:Label text="Doc." />
           <template>
             <m:Text
               text="{Main>line/businessDocument}" />
@@ -29,7 +29,7 @@
         <Column
           width="6rem"
           sortProperty="line/entryDate">
-          <m:Label text="Data" />
+          <m:Label text="{i18n>date}" />
           <template>
             <m:Text
               text="{
