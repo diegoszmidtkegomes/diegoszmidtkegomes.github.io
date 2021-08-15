@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">
   <m:VBox>
     <m:MessageStrip
-      text="Envio de dados mestres para o Ariba Sourcing"
+      text="{i18n>sourcMasterView}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -21,7 +21,7 @@
         <Column
           width="9rem"
           filterProperty="Name">
-          <m:Label text="Id Arquivo envio" />
+          <m:Label text="Id" />
           <template>
             <m:Text
               text="{Main>line/businessDocument}"
@@ -32,7 +32,7 @@
         <Column
           width="6rem"
           sortProperty="line/entryDate">
-          <m:Label text="Data" />
+          <m:Label text="{i18n>date}" />
           <template>
             <m:Text
               text="{
@@ -44,7 +44,7 @@
           </template>
         </Column>
         <Column width="20rem">
-          <m:Label text="Mensagem envio" />
+          <m:Label text="Messag. Sent" />
           <template>
             <m:Link
               text="{= ${Main>line/sourceId}.substr(0,36) }"
@@ -62,7 +62,7 @@
           </template>
         </Column>
         <Column width="20rem">
-          <m:Label text="Mensagem Retorno" />
+          <m:Label text="Messag. Resp" />
           <template>
 		   <m:Link
               text="{= ${Main>line/targetId}.substr(0,36) }"
