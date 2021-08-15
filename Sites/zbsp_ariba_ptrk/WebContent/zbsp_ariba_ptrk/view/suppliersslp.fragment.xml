@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">
   <m:VBox>
     <m:MessageStrip
-      text="Consulta de todos os fornecedores no ambiente Ariba SLP e verificação de histórico de integração da tabela ZMMT0002"
+      text="{i18n>slpView}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -62,7 +62,7 @@
           width="26rem"
           filterProperty="name"
           sortProperty="name">
-          <m:Label text="Nome" />
+          <m:Label text="{i18n>name}" />
           <template>
             <m:Text text="{Supplier>name}" />
           </template>
@@ -71,7 +71,7 @@
           width="10rem"
           filterProperty="qualificationStatus"
           sortProperty="qualificationStatus">
-          <m:Label text="Qualificação" />
+          <m:Label text="Qualif." />
           <template>
             <m:Text text="{Supplier>qualificationStatus}" />
           </template>
@@ -80,7 +80,7 @@
           width="10rem"
           filterProperty="registrationStatus"
           sortProperty="registrationStatus">
-          <m:Label text="Registro" />
+          <m:Label text="Regist." />
           <template>
             <m:Text text="{Supplier>registrationStatus}" />
           </template>
@@ -89,7 +89,7 @@
           width="8rem"
           filterProperty="integrationStatus"
           sortProperty="integrationStatus">
-          <m:Label text="Integração" />
+          <m:Label text="Integrat." />
           <template>
             <m:Text text="{Supplier>integrationStatus}" />
           </template>
