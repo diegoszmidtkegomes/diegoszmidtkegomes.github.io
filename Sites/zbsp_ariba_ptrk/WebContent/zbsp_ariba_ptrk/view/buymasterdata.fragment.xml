@@ -22,7 +22,7 @@
           width="9rem"
           filterProperty="businessDocument"
 		  sortProperty="businessDocument">
-          <m:Label text="Id Arquivo envio" />
+          <m:Label text="Id" />
           <template>
             <m:Text
               text="{Main>line/businessDocument}"

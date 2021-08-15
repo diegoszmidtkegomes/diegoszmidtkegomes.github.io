@@ -69,7 +69,7 @@
           <template>
             <m:Text text="{BuyingPr>originatingSystem}" />
           </template>
-        </Column>
+        </Column>	
         <Column
           width="6rem"
           filterProperty="erpRequisition"
