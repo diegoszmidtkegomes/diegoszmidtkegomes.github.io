@@ -17,7 +17,7 @@
             wrapping="true" />
         </heading>
         <snappedTitleOnMobile>
-          <m:Title text="Monitor integrações SAP Ariba" />
+          <m:Title text="{i18n>title}" />
         </snappedTitleOnMobile>
       </ObjectPageDynamicHeaderTitle>
     </headerTitle>
@@ -29,14 +29,14 @@
             <m:Text
               text="{Config>/mainCalculatedUrl}"
               wrapping="true" />-->
-            <m:Label text="Visualizar apenas erros" />
+            <m:Label text="{i18n>labelErrorFilter}" />
             <m:CheckBox
               selected="{Config>/errorOnly}" />
-            <m:Label text="Filtro" />
+            <m:Label text="{i18n>labelFilter}" />
             <m:Input
               value="{Config>/filter}"
               width="18rem" />
-            <m:Label text="Data seleção" />
+            <m:Label text="{i18n>labelFilterDate}" />
             <m:HBox>
               <m:DatePicker
                 displayFormat="short"
@@ -50,7 +50,7 @@
                 class="sapUiSmallMarginBottom" />
               <m:Button
                 type="Default"
-                text="Aplicar"
+                text="{i18n>labelFilterApply}"
                 press="onSearchString" />
             </m:HBox>
           </f:content>
