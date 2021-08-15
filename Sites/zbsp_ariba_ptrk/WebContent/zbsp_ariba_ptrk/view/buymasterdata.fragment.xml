@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">
   <m:VBox>
     <m:MessageStrip
-      text="Envio de dados mestres para o Ariba Buying"
+      text="{i18n>buyMasterBuy}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -33,7 +33,7 @@
         <Column
           width="6rem"
           sortProperty="line/entryDate">
-          <m:Label text="Data" />
+          <m:Label text="{i18n>date}" />
           <template>
             <m:Text
               text="{
@@ -45,7 +45,7 @@
           </template>
         </Column>
         <Column width="28rem">
-          <m:Label text="Mensagem envio" />
+          <m:Label text="{i18n>messageSend}" />
           <template>
             <m:Link
               text="{= ${Main>line/sourceId}.substr(0,36) }"
@@ -63,7 +63,7 @@
           </template>
         </Column>
         <Column width="28rem">
-          <m:Label text="Mensagem Retorno" />
+          <m:Label text="Messag. Resp." />
           <template>
 		   <m:Link
               text="{= ${Main>line/targetId}.substr(0,36) }"

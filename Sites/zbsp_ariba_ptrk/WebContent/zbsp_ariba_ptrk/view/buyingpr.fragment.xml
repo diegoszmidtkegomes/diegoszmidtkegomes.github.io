@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">
   <m:VBox>
     <m:MessageStrip
-      text="Consulta através de APIs no Ariba Buying de requisições de compras"
+      text="{i18n>buyPr}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -21,7 +21,7 @@
           width="9rem"
           filterProperty="buyingRequisition"
           sortProperty="buyingRequisition">
-          <m:Label text="Requisição Ariba" />
+          <m:Label text="Req. Ariba" />
           <template>
             <m:Link
               text="{BuyingPr>buyingRequisition}"
@@ -32,7 +32,7 @@
         <Column
           width="6rem"
           sortProperty="timeUpdated">
-          <m:Label text="Data" />
+          <m:Label text="{i18n>date}" />
           <template>
             <m:Text
               text="{
@@ -65,7 +65,7 @@
           width="9rem"
           filterProperty="originatingSystem"
           sortProperty="originatingSystem">
-          <m:Label text="Sistema Origem" />
+          <m:Label text="{i18n>origin}" />
           <template>
             <m:Text text="{BuyingPr>originatingSystem}" />
           </template>

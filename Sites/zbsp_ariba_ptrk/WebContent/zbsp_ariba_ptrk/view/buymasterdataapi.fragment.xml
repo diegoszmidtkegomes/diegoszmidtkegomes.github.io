@@ -7,7 +7,7 @@
   xmlns:l="sap.ui.layout">  
   <m:VBox>
     <m:MessageStrip
-      text="Consulta através de APIs no Ariba Buying de eventos de MasterData"
+      text="{i18n>buyMasterApi}"
       showIcon="true"
       showCloseButton="true"
       class="sapUiMediumMarginBottom" />
@@ -40,7 +40,7 @@
           width="10rem"
 	      filterProperty="eventStart"
           sortProperty="eventStart">		  
-          <m:Label text="Data" />
+          <m:Label text="{i18n>date}" />
           <template>
             <m:Text
               text="{
@@ -69,7 +69,7 @@
 		<Column
           width="8rem"
 		  hAlign="End">
-          <m:Label text="Linhas Criadas" />
+          <m:Label text="Lin. Creat." />
           <template>
             <m:Text text="{StatusMdBuying>recordsCreated}" />
           </template>
@@ -77,7 +77,7 @@
 		<Column
           width="8rem"
 		  hAlign="End">
-          <m:Label text="Linhas Atualiz." />
+          <m:Label text="Lin. Upd." />
           <template>
             <m:Text text="{StatusMdBuying>recordsUpdated}" />
           </template>
@@ -85,7 +85,7 @@
 		<Column
           width="8rem"
 		  hAlign="End">
-          <m:Label text="Linhas Delet." />
+          <m:Label text="Lin. Delet." />
           <template>
             <m:Text text="{StatusMdBuying>recordsDeleted}" />
           </template>
@@ -94,7 +94,7 @@
           width="12rem"		  
 		  filterProperty="filesProcessed"
           sortProperty="filesProcessed">
-          <m:Label text="Arqs. Proces." />
+          <m:Label text="Files. Proces." />
           <template>
             <m:Text text="{StatusMdBuying>filesProcessed}" />
           </template>
@@ -103,7 +103,7 @@
           width="10rem"
 		  sortProperty="percCompleteCurFiles"
 		  hAlign="End">
-          <m:Label text="Perc. Proc. Arqs." />
+          <m:Label text="Perc. Proc. Files." />
           <template>
             <!--<m:Text text="{StatusMdBuying>percCompleteCurFiles}" />-->
 			<m:ProgressIndicator
@@ -117,7 +117,7 @@
 		<Column
           width="10rem"		  
 		  filterProperty="errorMessages">
-          <m:Label text="Erros" />
+          <m:Label text="{i18n>errors}" />
           <template>
             <m:Text text="{StatusMdBuying>errorMessages}" />
           </template>
