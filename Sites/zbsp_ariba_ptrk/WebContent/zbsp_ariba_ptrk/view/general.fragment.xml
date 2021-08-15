@@ -96,7 +96,7 @@
       </VBox>
 	  
 	  <VBox>
-		<Text text="Recebimento Ordens de Compra Ariba Buying" class="sapUiSmallMargin">
+		<Text text="{i18n>generalOrderBuying}" class="sapUiSmallMargin">
 			<layoutData>
 				<layout:GridData span="XL12 L12 M12 S12"/>
 			</layoutData>
