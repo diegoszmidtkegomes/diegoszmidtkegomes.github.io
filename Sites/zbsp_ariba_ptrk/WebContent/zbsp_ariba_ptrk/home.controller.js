@@ -127,7 +127,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" )
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
-    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/b/611a73acd5667e403a43fe7b"); //ajustar
+    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/b/611a7501d5667e403a43ff30"); //ajustar
     this._oConfig.showAll = this._oConfig.errorOnly ? false : true ;
     this._oConfigModel.updateBindings();
 
@@ -150,7 +150,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
 
-    this._oStatusMdBuyingModel.loadData("https://api.jsonbin.io/b/61155422e1b0604017ae8926"); // ok
+    this._oStatusMdBuyingModel.loadData("https://api.jsonbin.io/b/611a7468e1b0604017b14f9c"); // ok
   },
   
   formatterLeadingZero: function(oValue){
