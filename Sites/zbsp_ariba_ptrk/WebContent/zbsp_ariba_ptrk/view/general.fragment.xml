@@ -248,7 +248,7 @@
         vizType='column'
         vizProperties="{
 					  title: {
-						text: 'Registro'
+						text: 'Register'
 					  },
 					  plotArea : {
 						dataLabel: {
@@ -299,7 +299,7 @@
         vizType='column'
         vizProperties="{
                     title: {
-                      text: 'Qualificação'
+                      text: 'Qualification'
                     },
                     plotArea : {
                       dataLabel: {
@@ -350,7 +350,7 @@
         vizType='column'
         vizProperties="{
                   title: {
-                      text: 'Integração'
+                      text: 'Integration'
                     },
                     plotArea : {
                       dataLabel: {
