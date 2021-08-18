@@ -127,7 +127,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" )
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
-    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/b/611a7501d5667e403a43ff30"); //ajustar
+    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/b/611cf1302aa80036126bcf4a"); //ajustar
     this._oConfig.showAll = this._oConfig.errorOnly ? false : true ;
     this._oConfigModel.updateBindings();
 
