@@ -127,23 +127,23 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" )
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
-    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/v3/b/611cf1302aa80036126bcf4a"); //ajustar
+    this._oQuoteRequestModel.loadData("https://api.jsonbin.io/v3/b/611cf1302aa80036126bcf4a", "", false); //ajustar
     this._oConfig.showAll = this._oConfig.errorOnly ? false : true ;
     this._oConfigModel.updateBindings();
 	//
 
     this._oSupplierDashboardConfig.calculatedUrl = this._oSupplierDashboardConfig.url
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" );
-    this._oSupplierDashboardModel.loadData("https://api.jsonbin.io/v3/b/611a662dd5667e403a43f718"); // ok
+    this._oSupplierDashboardModel.loadData("https://api.jsonbin.io/v3/b/611a662dd5667e403a43f718", "", false); // ok
 
-    this._oStatsModel.loadData("https://api.jsonbin.io/v3/b/6115514ee1b0604017ae8784");
+    this._oStatsModel.loadData("https://api.jsonbin.io/v3/b/6115514ee1b0604017ae8784", "", false);
     this._oConfig.buyingPrCalculatedUrl = this._oConfig.buyingPrUrl
       + "&filter=" + this._oConfig.filter
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" )
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
 
-    this._oBuyingPrModel.loadData("https://api.jsonbin.io/v3/b/6115544d53ca131484a81eb8"); // ok
+    this._oBuyingPrModel.loadData("https://api.jsonbin.io/v3/b/6115544d53ca131484a81eb8", "", false); // ok
 	
 	this._oConfig.buyingMdStatusCalcUrl = this._oConfig.buyingMdStatusUrl
       + "&filter=" + this._oConfig.filter
@@ -151,7 +151,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
 
-    this._oStatusMdBuyingModel.loadData("https://api.jsonbin.io/v3/b/611a7468e1b0604017b14f9c"); // ok
+    this._oStatusMdBuyingModel.loadData("https://api.jsonbin.io/v3/b/611a7468e1b0604017b14f9c", "", false); // ok
     //this._oStatusMdBuyingModel.loadData("https://api.jsonbin.io/b/611a7468e1b0604017b14f9c"); // ok
   },
   
