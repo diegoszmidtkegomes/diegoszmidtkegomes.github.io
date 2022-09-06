@@ -6,7 +6,7 @@
   xmlns:f="sap.ui.layout.form"
   controllerName="zbsp_ariba_ptrk.home"
   xmlns:html="http://www.w3.org/1999/xhtml">
-  <!--<ObjectPageLayout
+  <ObjectPageLayout
     id="ObjectPageLayout"
     upperCaseAnchorBar="false">
     <headerTitle>
@@ -65,7 +65,7 @@
       </m:HBox>
     </headerContent>
     <sections>
-      <ObjectPageSection
+      <!--<ObjectPageSection
         titleUppercase="false"
         title="{i18n>labelGeneralView}">
         <subSections>
@@ -230,7 +230,7 @@
             </blocks>
           </ObjectPageSubSection>
         </subSections>
-      </ObjectPageSection>
+      </ObjectPageSection>-->
     </sections>
-  </ObjectPageLayout>-->
+  </ObjectPageLayout>
 </core:View>
