@@ -65,7 +65,7 @@
       </m:HBox>
     </headerContent>
     <sections>
-      <!--<ObjectPageSection
+      <ObjectPageSection
         titleUppercase="false"
         title="{i18n>labelGeneralView}">
         <subSections>
@@ -80,7 +80,7 @@
           </ObjectPageSubSection>
         </subSections>
       </ObjectPageSection>
-      <ObjectPageSection
+      <!--<ObjectPageSection
         titleUppercase="false"
         title="Sourcing">
         <subSections>
