@@ -6,7 +6,7 @@
   xmlns:f="sap.ui.layout.form"
   controllerName="zbsp_ariba_ptrk.home"
   xmlns:html="http://www.w3.org/1999/xhtml">
-  <ObjectPageLayout
+  <!--<ObjectPageLayout
     id="ObjectPageLayout"
     upperCaseAnchorBar="false">
     <headerTitle>
@@ -24,11 +24,7 @@
     <headerContent>
       <m:HBox>
         <f:SimpleForm editable="true">
-          <f:content>
-            <!--<m:Label text="URL" />
-            <m:Text
-              text="{Config>/mainCalculatedUrl}"
-              wrapping="true" />-->
+          <f:content>           
             <m:Label text="{i18n>labelErrorFilter}" />
             <m:CheckBox
               selected="{Config>/errorOnly}" />
@@ -105,16 +101,7 @@
                 fragmentName="zbsp_ariba_ptrk.view.quotemessage"
                 type="XML" />
             </blocks>
-          </ObjectPageSubSection>
-		<!--<ObjectPageSubSection
-            title="Quote Message ({Main>/zclAribaQuoteMsgCpexCount})"
-            titleUppercase="false">
-            <blocks>
-              <core:Fragment
-                fragmentName="zbsp_ariba_ptrk.view.quotemessagecapex"
-                type="XML" />
-            </blocks>
-          </ObjectPageSubSection>-->
+          </ObjectPageSubSection>		
 		  <ObjectPageSubSection
             title="Master Data ({Main>/zclAribaSourcingMdCount})"
             titleUppercase="false">
@@ -138,25 +125,7 @@
                 fragmentName="zbsp_ariba_ptrk.view.suppliersslp"
                 type="XML" />
             </blocks>
-          </ObjectPageSubSection>
-		  <!--<ObjectPageSubSection
-            title="PollingClient ({Main>/zclAribaSlpPollingCount})"
-            titleUppercase="false">
-            <blocks>
-              <core:Fragment
-                fragmentName="zbsp_ariba_ptrk.view.supplierpolling"
-                type="XML" />
-            </blocks>
-          </ObjectPageSubSection>
-		  <ObjectPageSubSection
-            title="PollingClient Confirmation ({Main>/zclAribaSlpPlngConfCount})"
-            titleUppercase="false">
-            <blocks>
-              <core:Fragment
-                fragmentName="zbsp_ariba_ptrk.view.supplierpollingconf"
-                type="XML" />
-            </blocks>
-          </ObjectPageSubSection>-->
+          </ObjectPageSubSection>		 
         </subSections>
       </ObjectPageSection>
       <ObjectPageSection
@@ -263,5 +232,5 @@
         </subSections>
       </ObjectPageSection>
     </sections>
-  </ObjectPageLayout>
+  </ObjectPageLayout>-->
 </core:View>
