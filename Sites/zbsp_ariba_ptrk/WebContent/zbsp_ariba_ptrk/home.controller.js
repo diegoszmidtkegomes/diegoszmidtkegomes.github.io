@@ -130,6 +130,7 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
     this._oQuoteRequestModel.loadData("https://api.jsonbin.io/v3/b/611cf1302aa80036126bcf4a"); //ajustar
     this._oConfig.showAll = this._oConfig.errorOnly ? false : true ;
     this._oConfigModel.updateBindings();
+	//
 
     this._oSupplierDashboardConfig.calculatedUrl = this._oSupplierDashboardConfig.url
       + "&errorOnly=" + ( this._oConfig.errorOnly ? "true" : "false" );
