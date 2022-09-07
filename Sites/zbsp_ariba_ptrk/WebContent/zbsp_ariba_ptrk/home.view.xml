@@ -128,6 +128,7 @@
           </ObjectPageSubSection>		 
         </subSections>
       </ObjectPageSection>
+	  <!--
       <ObjectPageSection
         titleUppercase="false"
         title="Commerce Automation">
@@ -179,8 +180,8 @@
           </ObjectPageSubSection>
 		  
         </subSections>
-      </ObjectPageSection>
-	  <!--
+      </ObjectPageSection>-->
+	  
       <ObjectPageSection
         titleUppercase="false"
         title="Buying">
@@ -231,7 +232,7 @@
             </blocks>
           </ObjectPageSubSection>
         </subSections>
-      </ObjectPageSection>-->
+      </ObjectPageSection>
     </sections>
   </ObjectPageLayout>
 </core:View>
