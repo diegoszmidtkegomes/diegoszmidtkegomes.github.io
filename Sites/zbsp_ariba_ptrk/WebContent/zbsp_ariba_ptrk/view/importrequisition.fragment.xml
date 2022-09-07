@@ -50,7 +50,7 @@
           sortProperty="isSuccessful">
           <m:Label text="{i18n>send}" />
           <template>
-            <m:Text text="{= ${BuyingPr>isSuccessful} == true ? 'Sim' : 'Não' }" />
+            <m:Text text="{= ${BuyingPr>record/isSuccessful} == true ? 'Sim' : 'Não' }" />
           </template>
         </Column>
         <Column
