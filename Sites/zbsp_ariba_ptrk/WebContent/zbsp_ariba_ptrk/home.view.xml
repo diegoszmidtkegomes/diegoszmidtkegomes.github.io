@@ -85,7 +85,7 @@
         title="Sourcing">
         <subSections>
           <ObjectPageSubSection
-            title="Quote Request ({Main>/zclAribaQuoteRequestCount})"
+            title="Quote Request ({Main>/record/zclAribaQuoteRequestCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
