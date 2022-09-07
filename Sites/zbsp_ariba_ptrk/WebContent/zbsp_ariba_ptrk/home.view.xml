@@ -128,7 +128,7 @@
           </ObjectPageSubSection>		 
         </subSections>
       </ObjectPageSection>
-	  <!--
+	  
       <ObjectPageSection
         titleUppercase="false"
         title="Commerce Automation">
@@ -142,6 +142,7 @@
                 type="XML" />
             </blocks>
           </ObjectPageSubSection>
+		  <!--
           <ObjectPageSubSection
             title="Order Confirmation ({Main>/record/zclAribaOrderConfCount})"
             titleUppercase="false">
@@ -177,10 +178,10 @@
                 fragmentName="zbsp_ariba_ptrk.view.remitadv"
                 type="XML" />
             </blocks>
-          </ObjectPageSubSection>
+          </ObjectPageSubSection>-->
 		  
         </subSections>
-      </ObjectPageSection>-->
+      </ObjectPageSection>
 	  
       <ObjectPageSection
         titleUppercase="false"
