@@ -14,7 +14,7 @@
     <Table
       alternateRowColors="true"
 	  selectionMode="None"
-      rows="{Main>/zclAribaOrderRequest}"
+      rows="{Main>/record/zclAribaOrderRequest}"
       visibleRowCount="7">
       <columns>
         <Column

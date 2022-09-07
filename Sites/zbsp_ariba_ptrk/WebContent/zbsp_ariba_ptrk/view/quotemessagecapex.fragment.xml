@@ -15,7 +15,7 @@
       alternateRowColors="true"
       enableBusyIndicator="true"
 	  selectionMode="None"
-      rows="{Main>/zclAribaQuoteMsgCpex}"
+      rows="{Main>/record/zclAribaQuoteMsgCpex}"
       visibleRowCount="7">
       <columns>
         <Column

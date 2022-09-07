@@ -15,7 +15,7 @@
       alternateRowColors="true"
 	  selectionMode="None"
       enableBusyIndicator="true"
-      rows="{Main>/zclAribaSourcingMd}"
+      rows="{Main>/record/zclAribaSourcingMd}"
       visibleRowCount="7">
       <columns>
         <Column

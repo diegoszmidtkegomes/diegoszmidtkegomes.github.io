@@ -15,7 +15,7 @@
       alternateRowColors="true"
 	  selectionMode="None"
       enableBusyIndicator="true"
-      rows="{Main>/zclAribaSlpPlngConf}"
+      rows="{Main>/record/zclAribaSlpPlngConf}"
       visibleRowCount="7">
       <columns>
         <Column

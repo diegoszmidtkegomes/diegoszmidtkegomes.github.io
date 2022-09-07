@@ -94,7 +94,7 @@
             </blocks>
           </ObjectPageSubSection>
           <ObjectPageSubSection
-            title="Quote Message({Main>/zclAribaQuoteMessageCount})"
+            title="Quote Message({Main>/record/zclAribaQuoteMessageCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -103,7 +103,7 @@
             </blocks>
           </ObjectPageSubSection>		
 		  <ObjectPageSubSection
-            title="Master Data ({Main>/zclAribaSourcingMdCount})"
+            title="Master Data ({Main>/record/zclAribaSourcingMdCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -128,12 +128,12 @@
           </ObjectPageSubSection>		 
         </subSections>
       </ObjectPageSection>
-      <!--<ObjectPageSection
+      <ObjectPageSection
         titleUppercase="false"
         title="Commerce Automation">
         <subSections>
           <ObjectPageSubSection
-            title="Purchase Order ({Main>/zclAribaOrderRequestCount})"
+            title="Purchase Order ({Main>/record/zclAribaOrderRequestCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -142,7 +142,7 @@
             </blocks>
           </ObjectPageSubSection>
           <ObjectPageSubSection
-            title="Order Confirmation ({Main>/zclAribaOrderConfCount})"
+            title="Order Confirmation ({Main>/record/zclAribaOrderConfCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -151,7 +151,7 @@
             </blocks>
           </ObjectPageSubSection>
           <ObjectPageSubSection
-            title="Supplier Service Entry Sheet ({Main>/zclAribaServentrysheetCount})"
+            title="Supplier Service Entry Sheet ({Main>/record/zclAribaServentrysheetCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -160,7 +160,7 @@
             </blocks>
           </ObjectPageSubSection>
           <ObjectPageSubSection
-            title="Supplier Service Entry Sheet response ({Main>/zclAribaServicesheetRCount})"
+            title="Supplier Service Entry Sheet response ({Main>/record/zclAribaServicesheetRCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -169,7 +169,7 @@
             </blocks>
           </ObjectPageSubSection>
 		  <ObjectPageSubSection
-            title="Remittance Advice ({Main>/zclAribaRemitAdvCount})"
+            title="Remittance Advice ({Main>/record/zclAribaRemitAdvCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -203,7 +203,7 @@
             </blocks>
           </ObjectPageSubSection>
           <ObjectPageSubSection
-            title="Purchase Order ({Main>/zclAribaPurchaseOrderCount})"
+            title="Purchase Order ({Main>/record/zclAribaPurchaseOrderCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -212,7 +212,7 @@
             </blocks>
           </ObjectPageSubSection>
 		  <ObjectPageSubSection
-            title="Master Data ({Main>/zclAribaBuyingMdCount})"
+            title="Master Data ({Main>/record/zclAribaBuyingMdCount})"
             titleUppercase="false">
             <blocks>
               <core:Fragment
@@ -230,7 +230,7 @@
             </blocks>
           </ObjectPageSubSection>
         </subSections>
-      </ObjectPageSection>-->
+      </ObjectPageSection>
     </sections>
   </ObjectPageLayout>
 </core:View>

@@ -14,7 +14,7 @@
     <Table
       enableBusyIndicator="true"
 	  selectionMode="None"
-      rows="{BuyingPr>/buyingPr}"
+      rows="{BuyingPr>/record/buyingPr}"
       visibleRowCount="7">
       <columns>
         <Column

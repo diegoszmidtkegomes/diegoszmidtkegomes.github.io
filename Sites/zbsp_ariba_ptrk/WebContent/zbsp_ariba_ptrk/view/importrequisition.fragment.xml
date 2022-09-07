@@ -15,7 +15,7 @@
       alternateRowColors="true"
       enableBusyIndicator="true"
 	  selectionMode="None"
-      rows="{BuyingPr>/erpRequisition}"
+      rows="{BuyingPr>/record/erpRequisition}"
       visibleRowCount="7">
       <columns>
         <Column

@@ -14,7 +14,7 @@
     <Table
       alternateRowColors="true"
 	  selectionMode="None"
-      rows="{Main>/zclAribaRemitAdv}"
+      rows="{Main>/record/zclAribaRemitAdv}"
       visibleRowCount="7">
       <columns>
         <Column

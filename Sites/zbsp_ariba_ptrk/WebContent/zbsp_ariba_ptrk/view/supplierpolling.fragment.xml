@@ -15,7 +15,7 @@
       alternateRowColors="true"
 	  selectionMode="None"
       enableBusyIndicator="true"
-      rows="{Main>/zclAribaSlpPolling}"
+      rows="{Main>/record/zclAribaSlpPolling}"
       visibleRowCount="7">
       <columns>
         <Column

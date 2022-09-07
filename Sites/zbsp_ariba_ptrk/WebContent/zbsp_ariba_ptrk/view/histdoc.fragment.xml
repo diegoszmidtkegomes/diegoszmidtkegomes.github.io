@@ -11,7 +11,7 @@
 	  selectionMode="None"
 	  noDataText="Sem dados na tabela ZTMMD_ARIBA_LOG"
       enableBusyIndicator="true"
-	  rows="{HistDoc>/lines}"
+	  rows="{HistDoc>/record/lines}"
       visibleRowCount="7">
       <columns>
         <Column

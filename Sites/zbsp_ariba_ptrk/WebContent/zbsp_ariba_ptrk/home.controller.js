@@ -83,8 +83,8 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
 
   onQuoteRequestCompleted : function(oEvent){
     if(oEvent.getParameter("success")){
-      this.getView().getModel("Config").setProperty("/dateFrom", this.getView().getModel("Main").getProperty("/dateFrom"));
-      this.getView().getModel("Config").setProperty("/dateTo", this.getView().getModel("Main").getProperty("/dateTo"));
+      this.getView().getModel("Config").setProperty("/dateFrom", this.getView().getModel("Main").getProperty("/record/dateFrom"));
+      this.getView().getModel("Config").setProperty("/dateTo", this.getView().getModel("Main").getProperty("/record/dateTo"));
     }
     this.getView().byId("ObjectPageLayout").setBusy(false);
     //TODO handle errors

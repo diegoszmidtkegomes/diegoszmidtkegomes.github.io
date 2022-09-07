@@ -15,7 +15,7 @@
       alternateRowColors="true"
 	  selectionMode="None"
       enableBusyIndicator="true"
-      rows="{StatusMdBuying>/status}"
+      rows="{StatusMdBuying>/record/status}"
       visibleRowCount="7">
       <columns>
 		<Column
