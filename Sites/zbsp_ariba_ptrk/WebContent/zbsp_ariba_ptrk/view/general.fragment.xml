@@ -29,11 +29,11 @@
 					<layout:GridData span="XL12 L12 M12 S12"/>
 				</layoutData>
 			</Text>
-			<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/record/record/zclAribaQuoteRequestTotal} > 0 }">
+			<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/record/zclAribaQuoteRequestTotal} > 0 }">
 				<items>
 					<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">
 						<c:segments>
-							<c:InteractiveDonutChartSegment label="Erro" value="{= Math.round( (${Main>/record/record/zclAribaQuoteRequestCount} / ${Main>/record/zclAribaQuoteRequestTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/record/zclAribaQuoteRequestCount} /  ${Main>/record/zclAribaQuoteRequestTotal}) * 100 )}%" color="Error"/>							
+							<c:InteractiveDonutChartSegment label="Erro" value="{= Math.round( (${Main>/record/zclAribaQuoteRequestCount} / ${Main>/record/zclAribaQuoteRequestTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/record/zclAribaQuoteRequestCount} /  ${Main>/record/zclAribaQuoteRequestTotal}) * 100 )}%" color="Error"/>							
 							<c:InteractiveDonutChartSegment label="Sucesso" 
 							value="{= Math.round(( ${Main>/record/zclAribaQuoteRequestTotal} - ${Main>/record/zclAribaQuoteRequestCount} ) / ${Main>/record/zclAribaQuoteRequestTotal} * 100 )}" 
 							displayedValue="{= Math.round(( ${Main>/record/zclAribaQuoteRequestTotal} - ${Main>/record/zclAribaQuoteRequestCount})  / ${Main>/record/zclAribaQuoteRequestTotal} * 100 )}%" color="Good"/>							
