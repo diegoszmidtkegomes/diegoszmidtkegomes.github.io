@@ -180,6 +180,7 @@
 		  
         </subSections>
       </ObjectPageSection>
+	  <!--
       <ObjectPageSection
         titleUppercase="false"
         title="Buying">
@@ -230,7 +231,7 @@
             </blocks>
           </ObjectPageSubSection>
         </subSections>
-      </ObjectPageSection>
+      </ObjectPageSection>-->
     </sections>
   </ObjectPageLayout>
 </core:View>
