@@ -44,7 +44,7 @@
               wrapping="false" />
           </template>
         </Column>
-        <Column
+        <!--<Column
           width="12rem"
           filterProperty="isSuccessful"
           sortProperty="isSuccessful">
@@ -52,7 +52,7 @@
           <template>
             <m:Text text="{= ${BuyingPr>isSuccessful} == true ? 'Sim' : 'Não' }" />
           </template>
-        </Column>
+        </Column>-->
         <Column
           width="40rem"
           filterProperty="msg"
