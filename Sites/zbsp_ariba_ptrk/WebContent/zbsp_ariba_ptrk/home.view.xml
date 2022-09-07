@@ -142,7 +142,7 @@
                 type="XML" />
             </blocks>
           </ObjectPageSubSection>
-		  <!--
+		  
           <ObjectPageSubSection
             title="Order Confirmation ({Main>/record/zclAribaOrderConfCount})"
             titleUppercase="false">
@@ -161,6 +161,7 @@
                 type="XML" />
             </blocks>
           </ObjectPageSubSection>
+		  <!--
           <ObjectPageSubSection
             title="Supplier Service Entry Sheet response ({Main>/record/zclAribaServicesheetRCount})"
             titleUppercase="false">
