@@ -119,6 +119,11 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
 	}
 	this._dialogHistDoc.open();	   
   },
+  
+  _fUpdateModelSelect : function() {
+	this._oConfig.showAll = this._oConfig.errorOnly ? false : true ;
+    this._oConfigModel.updateBindings();
+  },
 
   _fUpdateModel : function() {
     this.getView().byId("ObjectPageLayout").setBusy(true);

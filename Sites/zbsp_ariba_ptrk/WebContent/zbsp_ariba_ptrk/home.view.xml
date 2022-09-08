@@ -26,7 +26,7 @@
         <f:SimpleForm editable="true">
           <f:content>           
             <m:Label text="{i18n>labelErrorFilter}" />
-            <m:CheckBox select="onSearchString"
+            <m:CheckBox select="_fUpdateModelSelect"
               selected="{Config>/errorOnly}" />
             <m:Label text="{i18n>labelFilter}" />
             <m:Input
