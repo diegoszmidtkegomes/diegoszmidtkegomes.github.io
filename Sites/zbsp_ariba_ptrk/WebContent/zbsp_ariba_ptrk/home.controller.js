@@ -143,7 +143,8 @@ sap.ui.controller("zbsp_ariba_ptrk.home", {
       + ( !isNaN(this._oConfig.dateFrom) ? "&dateFrom=" + this._oConfig.dateFrom : "" )
       + ( !isNaN(this._oConfig.dateTo) ? "&dateTo=" + this._oConfig.dateTo : "" )
 
-    this._oBuyingPrModel.loadData("https://api.jsonbin.io/v3/b/6115544d53ca131484a81eb8", "", false); // ok
+    //this._oBuyingPrModel.loadData("https://api.jsonbin.io/v3/b/6115544d53ca131484a81eb8", "", false); // ok
+    this._oBuyingPrModel.loadData("https://api.jsonbin.io/v3/b/631959a0e13e6063dc9f7fa0", "", false); // ok
 	
 	this._oConfig.buyingMdStatusCalcUrl = this._oConfig.buyingMdStatusUrl
       + "&filter=" + this._oConfig.filter

@@ -268,7 +268,7 @@
                 }">
         <viz:dataset>
           <viz.data:FlattenedDataset
-            data="{Supplier>/registration}">
+            data="{Supplier>/record/registration}">
             <viz.data:dimensions>
               <viz.data:DimensionDefinition
                 name="label"
@@ -319,7 +319,7 @@
                   }">
         <viz:dataset>
           <viz.data:FlattenedDataset
-            data="{Supplier>/qualification}">
+            data="{Supplier>/record/qualification}">
             <viz.data:dimensions>
               <viz.data:DimensionDefinition
                 name="label"
@@ -370,7 +370,7 @@
              	 	}">
         <viz:dataset>
           <viz.data:FlattenedDataset
-            data="{Supplier>/integration}">
+            data="{Supplier>/record/integration}">
             <viz.data:dimensions>
               <viz.data:DimensionDefinition
                 name="label"
