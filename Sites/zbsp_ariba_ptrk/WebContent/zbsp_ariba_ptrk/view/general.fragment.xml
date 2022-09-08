@@ -31,7 +31,7 @@
 			</Text>
 			<FlexBox width="20rem" height="10rem" alignItems="left" justifyContent="SpaceBetween" visible="{= ${Main>/record/zclAribaQuoteRequestTotal} > 0 }">
 				<items>
-					<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">
+					<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="true">
 						<c:segments>
 							<!--<c:InteractiveDonutChartSegment label="Error" value="{= Math.round( (${Main>/record/zclAribaQuoteRequestCount} / ${Main>/record/zclAribaQuoteRequestTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/record/zclAribaQuoteRequestCount} /  ${Main>/record/zclAribaQuoteRequestTotal}) * 100 )}%" color="Error"/>-->							
 							<c:InteractiveDonutChartSegment label="Error" value="1" displayedValue="50%" color="Error"/>
@@ -51,7 +51,7 @@
 						fraction="{Main>/record/zclAribaQuoteRequestCount}"
 						valueColor="Error"
 						press="press"
-						visible="{Config>/errorOnly}"
+						visible="false"
 						class="sapUiSmallMargin"></c:RadialMicroChart>
 				</items>
 			</FlexBox>	
