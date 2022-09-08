@@ -1,0 +1,52 @@
+Good afternoon everyone, nice to meet you all. 
+Today we are going to talk about an application that we developed to facilitate 
+the monitoring of the integrations between SAP and Ariba, so For this, 
+we developed our custom integration monitor. 
+I will start providing some technical details and if you have any questions at any time 
+feel free to ask me.
+The version of this monitor is hosted directly in the SAP environment, 
+so to access the application each user must have an SAP user.
+At the top of the page there are some filters. First, a filter to select whether 
+you want to see all types of messages or just errors. 
+You can also put a specific ID to filter on all records and 
+a date range to select, click the apply button and the application  will find the corresponding data.
+There are a program on SAP side scheduled to run every 30 minutes 
+to update the data in our custom tables. This program reads all log data 
+saved by the integration with CI9 or CIG. 
+In the next section there are some charts. In the left part of the screen, the application 
+shows a percentage of integrations completed with errors and success. On the right part, 
+information about the SLP module is shown with all status in the registration, 
+qualification and integration sections.
+The next sections are divided by ariba modules, 
+--Add Sourcing
+RFQ
+QuoteMessage
+Master Data
+--
+
+Starting with the commerce automation, 
+the purchase orders created are listed here, with the order number, date and link to IDOC 
+and XML file sent to Ariba. 
+When the user clicks on the link he is redirected to the SAP Web pages and the information 
+is displayed in a new tab. I will click to show an example. This visualization structure 
+will repeat in all documents, with Id and links to get detailed information on a specific line. 
+Shown below is the order confirmation interface. 
+The first column shows the suppliers id, and the next columns shows the link to get the 
+XML file and the link to the SAP document. 
+The integration of supplier service sheet 
+is similar to order confirmation, with the same type of information, but in this scenario 
+the response interface is shown below. 
+The latest integration of Ariba Network is the 
+payments interface, with the document number and corresponding status.
+Now is shown the information about buying integrations. The first is about the purchase 
+requisitions created on Ariba and sent to SAP ERP. For this integration the applications 
+consumes an API to get information and show the number of requisitions, and some status, 
+with an link to access the document on Ariba side.
+Below is shown the import requisition interface, with purchase requisitions created on 
+SAP and sent to Ariba. For this scenario on this customer, we have a custom table with 
+specific status. The last two integrations are about purchase order creation, 
+with information from Ariba and the corresponding SAP order number.
+And the latest information is about the master data integration. 
+The first table shows the interface that sent data to Ariba and the other table show 
+the status of each process files on Ariba, with percentages and number of lines created, 
+updated and deleted.

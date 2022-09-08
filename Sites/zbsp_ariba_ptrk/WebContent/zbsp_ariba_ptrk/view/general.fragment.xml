@@ -177,7 +177,8 @@
 			<items>			
 				<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">
 					<c:segments>
-						<c:InteractiveDonutChartSegment label="Error" value="{= Math.round( (${Main>/record/zclAribaServentrysheetCount} / ${Main>/record/zclAribaServentrysheetTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/record/zclAribaServentrysheetCount} /  ${Main>/record/zclAribaServentrysheetTotal}) * 100 )}%" color="Error"/>							
+						<c:InteractiveDonutChartSegment label="Error" value="{= Math.round( (${Main>/record/zclAribaServentrysheetCount} / ${Main>/record/zclAribaServentrysheetTotal}) * 100 )}" 
+						displayedValue="{= Math.round((${Main>/record/zclAribaServentrysheetCount} /  ${Main>/record/zclAribaServentrysheetTotal}) * 100 )}%" color="Error"/>							
 						<c:InteractiveDonutChartSegment label="Success" 
 						value="{= Math.round(( ${Main>/record/zclAribaServentrysheetTotal} - ${Main>/record/zclAribaServentrysheetCount} ) / ${Main>/record/zclAribaServentrysheetTotal} * 100 )}" 
 						displayedValue="{= Math.round(( ${Main>/record/zclAribaServentrysheetTotal} - ${Main>/record/zclAribaServentrysheetCount})  / ${Main>/record/zclAribaServentrysheetTotal} * 100 )}%" color="Good"/>							
@@ -212,7 +213,8 @@
 				<items>
 					<c:InteractiveDonutChart selectionChanged="onSelectionChanged" visible="{Config>/showAll}">					
 						<c:segments>
-							<c:InteractiveDonutChartSegment label="Error" value="{= Math.round( (${Main>/record/zclAribaRemitAdvCount} / ${Main>/record/zclAribaRemitAdvTotal}) * 100 )}" displayedValue="{= Math.round((${Main>/record/zclAribaRemitAdvCount} /  ${Main>/record/zclAribaRemitAdvCount}) * 100 )}%" color="Error"/>							
+							<c:InteractiveDonutChartSegment label="Error" value="{= Math.round( (${Main>/record/zclAribaRemitAdvCount} / ${Main>/record/zclAribaRemitAdvTotal}) * 100 )}" 
+							displayedValue="{= Math.round((${Main>/record/zclAribaRemitAdvCount} /  ${Main>/record/zclAribaRemitAdvTotal}) * 100 )}%" color="Error"/>							
 							<c:InteractiveDonutChartSegment label="Success" 
 							value="{= Math.round( (${Main>/record/zclAribaRemitAdvTotal} - ${Main>/record/zclAribaRemitAdvCount} ) / ${Main>/record/zclAribaRemitAdvTotal} * 100 )}" 
 							displayedValue="{= Math.round( ( ${Main>/record/zclAribaRemitAdvTotal} - ${Main>/record/zclAribaRemitAdvCount})  / ${Main>/record/zclAribaRemitAdvTotal} * 100 )}%" color="Good"/>
